@@ -57,6 +57,7 @@ Follow the steps below to use the project on your local computer:
 
 ## How to extend
 To add your own questions please see the TODO comments in
+- app/Http/Controllers/Auth/RegistrationController.php
 - resources/views/forms/students.blade.php
 - resources/views/forms/teachers.blade.php
 - database/migrations/2023_07_21_180941_create_questions_table.php

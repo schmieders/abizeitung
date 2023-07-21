@@ -32,7 +32,8 @@ class RegistrationController extends Controller
     {
         $request->validate($request->rules());
 
-        if (!str_ends_with($request->email, 'schmieders.dev')) {
+        // TODO add your schools url
+        if (!str_ends_with($request->email, 'example.dev')) {
             throw ValidationException::withMessages([
                 'email' => 'Bitte benutze deine Schul-E-Mail-Adresse',
             ]);
@@ -50,7 +51,12 @@ class RegistrationController extends Controller
             ]);
         }
 
-        $isTeacher = str_ends_with($request->email, '@schmieders.de');
+        /**
+         * TODO add your teachers email url
+         * This approach assumes that students use a different subdomain for their emails
+         * e.g. mail.example.de
+         */
+        $isTeacher = str_ends_with($request->email, '@example.de');
 
         $role = DB::table('roles')
             ->select('id')

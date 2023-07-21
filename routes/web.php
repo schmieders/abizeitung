@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/', [FormController::class, 'create'])->name('form');
     Route::post('/', [FormController::class, 'store']);
+    Route::get('/image', [FormController::class, 'createImage'])->name('image');
+    Route::post('/image', [FormController::class, 'storeImage']);
 });
 
 require __DIR__ . '/auth.php';

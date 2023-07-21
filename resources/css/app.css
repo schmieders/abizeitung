@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .min-h-form {
-    /* 100vh - Margin - Heading - Button - NavBar */
-    min-height: calc(100vh - 96px - 88px - 50px - 64px)
+    /* 100vh - Margin - Heading - Button - NavBar - Image */
+    min-height: calc(100vh - 96px - 88px - 50px - 64px - 174px)
 }
