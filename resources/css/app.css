@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.min-h-form {
+    /* 100vh - Margin - Heading - Button - NavBar */
+    min-height: calc(100vh - 96px - 88px - 50px - 64px)
+}
